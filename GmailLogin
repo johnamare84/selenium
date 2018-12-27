@@ -1,0 +1,43 @@
+/**
+ * 
+ */
+package login1;
+
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import login.Gmail;
+
+/**
+ * @author Leule Limenih
+ *
+ */
+public class GmailLogin 
+
+{
+	@Test 
+	public void gmailLogin() 
+	
+	{
+		//System.setProperty("webdriver.fireFox.driver", "C:\\geckodriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
+		//WebDriver driver = new FirefoxDriver();
+		WebDriver driver= new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://gmail.com/");
+		
+		Gmail gmail=new Gmail(driver);
+		gmail.typeUsername("johnamare84@gmail.com");
+		gmail.typeNext(null);
+		gmail.typePassword("*5fotifo");
+		gmail.typeNext1(null);
+		
+		
+		//driver.quit();
+		
+		
+		
+		
+	}
+}
